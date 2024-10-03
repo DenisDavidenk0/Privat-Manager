@@ -1,0 +1,46 @@
+services:
+  db:
+    image: postgres:14.13
+    container_name: test_privatbank-db-1
+    environment:
+      POSTGRES_USER: postgres
+      POSTGRES_PASSWORD: 1111
+      POSTGRES_DB: privat_bank
+    volumes:
+      - db_data:/var/lib/postgresql/data
+    ports:
+      - '5432:5432'
+
+  backend:
+    build:
+      context: ./server
+      dockerfile: Dockerfile
+    container_name: test_privatbank-backend-1
+    ports:
+      - '3000:3000'
+    environment:
+      NODE_ENV: production
+      DB_HOST: db
+      DB_PORT: 5432
+      DB_USER: postgres
+      DB_PASSWORD: 1111
+      DB_NAME: privat_bank
+    depends_on:
+      - db
+
+  frontend:
+    build:
+      context: ./client
+      dockerfile: Dockerfile
+    container_name: test_privatbank-frontend-1
+    environment:
+      VITE_API_URL: ${VITE_API_URL}  
+      VITE_APP_ENVIRONMENT: ${VITE_APP_ENVIRONMENT} 
+    ports:
+      - '80:80'
+    depends_on:
+      - backend
+
+volumes:
+  db_data:
+

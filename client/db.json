@@ -1,0 +1,161 @@
+{
+	"clients": [
+		{
+			"id": 1,
+			"name": "Иван Иванов3",
+			"email": "ivan@example.com"
+		},
+		{
+			"id": 2,
+			"name": "Анна Петрова",
+			"email": "anna@example.com"
+		},
+		{
+			"id": 3,
+			"name": "Иван1 Иванов",
+			"email": "ivan@example.com"
+		},
+		{
+			"id": 5,
+			"name": "Анна 2Петрова",
+			"email": "anna@example.com"
+		}
+	],
+	"categories": [
+		{
+			"id": 1,
+			"name": "Электроника"
+		},
+		{
+			"id": 2,
+			"name": "Книги"
+		},
+		{
+			"name": "Мясо",
+			"id": 3
+		},
+		{
+			"name": "Apple ",
+			"id": 4
+		}
+	],
+	"products": [
+		{
+			"id": 1,
+			"name": "Телефон",
+			"price": 500,
+			"categoryId": 1,
+			"shops": [
+				{
+					"name": "Магазин А"
+				},
+				{
+					"name": "Магазин Б"
+				},
+				{
+					"name": "Магазин 3"
+				}
+			]
+		},
+		{
+			"id": 2,
+			"name": "Ноутбук",
+			"price": 1500,
+			"categoryId": 1,
+			"shops": [
+				{
+					"name": "Магазин Б"
+				}
+			]
+		},
+		{
+			"id": 3,
+			"name": "Роман",
+			"price": 20,
+			"categoryId": 2,
+			"shops": [
+				{
+					"name": "Магазин В"
+				}
+			]
+		},
+		{
+			"shop": [
+				{
+					"name": "Магазин 22"
+				}
+			],
+			"name": "Мясо Товар",
+			"price": 500,
+			"categoryId": 1,
+			"id": 4,
+			"shops": [
+				{
+					"name": "Лавка у трасы "
+				}
+			]
+		},
+		{
+			"shop": [
+				{
+					"name": "Магазин 223"
+				}
+			],
+			"name": "Курица ",
+			"price": 120,
+			"categryId": 3,
+			"id": 5
+		},
+		{
+			"shop": [],
+			"name": "ffff",
+			"price": 12,
+			"categryId": 3,
+			"id": 6
+		},
+		{
+			"shop": [],
+			"name": "fsdfsd",
+			"price": 23,
+			"categryId": 3,
+			"id": 7
+		},
+		{
+			"shop": [],
+			"name": "Денис",
+			"price": 23,
+			"categryId": 3,
+			"id": 8
+		},
+		{
+			"shop": [],
+			"name": "Денис1111",
+			"price": 23,
+			"categryId": 4,
+			"id": 9
+		}
+	],
+	"orders": [
+		{
+			"id": 1,
+			"productId": 1,
+			"quantity": 2,
+			"date": "2023-09-01",
+			"clientId": 1
+		},
+		{
+			"id": 2,
+			"productId": 3,
+			"quantity": 1,
+			"date": "2023-09-02",
+			"clientId": 2
+		},
+		{
+			"clientId": 7,
+			"productId": 2,
+			"quantity": 55,
+			"date": "2000-08-20",
+			"id": 3
+		}
+	]
+}
