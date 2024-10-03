@@ -5,6 +5,7 @@ import {
 	ReferenceManyField,
 	Datagrid,
 	DateField,
+	ReferenceField,
 } from "react-admin";
 
 export const ClientShow: React.FC = (): JSX.Element => (
@@ -22,7 +23,11 @@ export const ClientShow: React.FC = (): JSX.Element => (
 					<TextField source="id" />
 					<DateField label="Дата" source="date" />
 					<TextField label="Количество" source="quantity" />
-					<TextField label="Товар" source="product.name" />
+					<ReferenceField
+						label="Товар"
+						reference="products"
+						source="productId"
+					/>
 				</Datagrid>
 			</ReferenceManyField>
 		</SimpleShowLayout>
