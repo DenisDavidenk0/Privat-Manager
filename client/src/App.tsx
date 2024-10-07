@@ -17,15 +17,9 @@ import { OrderShow } from "./features/orders/OrderShow";
 import { OrderEdit } from "./features/orders/OrderEdit";
 import dataProvider from "./dataProvider/dataProvider";
 import Dashboard from "./components/layout/Dashboard";
-import type { Router } from "@tanstack/react-router";
-
-interface AppProps {
-  // eslint-disable-next-line @typescript-eslint/no-explicit-any
-  router: Router<any, any, any, any>; 
-}
 
 
-const App: React.FC<AppProps> = () => {
+const App: React.FC = () => {
 	return (
 		<Admin dashboard={Dashboard} dataProvider={dataProvider}>
 			<Resource
