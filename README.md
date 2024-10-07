@@ -61,10 +61,6 @@ DB_PORT=5432
 ### After that run this commands
 
 ```bash
-cd client
-docker-compose build --build-arg VITE_API_URL=http://localhost:3000/api
-
-cd ../server
 docker-compose build
 
 docker-compose up
